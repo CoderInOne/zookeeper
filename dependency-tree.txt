@@ -1,0 +1,344 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Apache ZooKeeper                                                   [pom]
+[INFO] Apache ZooKeeper - Documentation                                   [jar]
+[INFO] Apache ZooKeeper - Jute                                            [jar]
+[INFO] Apache ZooKeeper - Server                                          [jar]
+[INFO] Apache ZooKeeper - Metrics Providers                               [pom]
+[INFO] Apache ZooKeeper - Prometheus.io Metrics Provider                  [jar]
+[INFO] Apache ZooKeeper - Client                                          [pom]
+[INFO] Apache ZooKeeper - Recipes                                         [pom]
+[INFO] Apache ZooKeeper - Recipes - Election                              [jar]
+[INFO] Apache ZooKeeper - Recipes - Lock                                  [jar]
+[INFO] Apache ZooKeeper - Recipes - Queue                                 [jar]
+[INFO] Apache ZooKeeper - Assembly                                        [pom]
+[INFO] 
+[INFO] --------------------< org.apache.zookeeper:parent >---------------------
+[INFO] Building Apache ZooKeeper 3.6.0-SNAPSHOT                          [1/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ parent ---
+[INFO] org.apache.zookeeper:parent:pom:3.6.0-SNAPSHOT
+[INFO] 
+[INFO] ----------------< org.apache.zookeeper:zookeeper-docs >-----------------
+[INFO] Building Apache ZooKeeper - Documentation 3.6.0-SNAPSHOT          [2/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-docs ---
+[INFO] org.apache.zookeeper:zookeeper-docs:jar:3.6.0-SNAPSHOT
+[INFO] 
+[INFO] ----------------< org.apache.zookeeper:zookeeper-jute >-----------------
+[INFO] Building Apache ZooKeeper - Jute 3.6.0-SNAPSHOT                   [3/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-jute ---
+[INFO] org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT
+[INFO] +- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] \- junit:junit:jar:4.12:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] 
+[INFO] -------------------< org.apache.zookeeper:zookeeper >-------------------
+[INFO] Building Apache ZooKeeper - Server 3.6.0-SNAPSHOT                 [4/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper ---
+[INFO] org.apache.zookeeper:zookeeper:jar:3.6.0-SNAPSHOT
+[INFO] +- com.github.spotbugs:spotbugs-annotations:jar:3.1.9:provided (optional) 
+[INFO] |  \- com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) 
+[INFO] +- org.hamcrest:hamcrest-all:jar:1.3:test
+[INFO] +- commons-collections:commons-collections:jar:3.2.2:test
+[INFO] +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] +- org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT:compile
+[INFO] +- commons-cli:commons-cli:jar:1.2:provided
+[INFO] +- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  \- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] +- io.netty:netty-transport-native-epoll:jar:4.1.36.Final:compile
+[INFO] |  \- io.netty:netty-transport-native-unix-common:jar:4.1.36.Final:compile
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] +- org.slf4j:slf4j-log4j12:jar:1.7.25:compile
+[INFO] +- org.eclipse.jetty:jetty-server:jar:9.4.18.v20190429:provided
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.1.0:provided
+[INFO] |  +- org.eclipse.jetty:jetty-http:jar:9.4.18.v20190429:provided
+[INFO] |  |  \- org.eclipse.jetty:jetty-util:jar:9.4.18.v20190429:provided
+[INFO] |  \- org.eclipse.jetty:jetty-io:jar:9.4.18.v20190429:provided
+[INFO] +- org.eclipse.jetty:jetty-servlet:jar:9.4.18.v20190429:provided
+[INFO] |  \- org.eclipse.jetty:jetty-security:jar:9.4.18.v20190429:provided
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.9.9.1:provided
+[INFO] |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:provided
+[INFO] |  \- com.fasterxml.jackson.core:jackson-core:jar:2.9.9:provided
+[INFO] +- com.googlecode.json-simple:json-simple:jar:1.1.1:provided
+[INFO] +- org.bouncycastle:bcprov-jdk15on:jar:1.60:test
+[INFO] +- org.bouncycastle:bcpkix-jdk15on:jar:1.60:test
+[INFO] +- jline:jline:jar:2.11:provided
+[INFO] +- io.dropwizard.metrics:metrics-core:jar:3.2.5:provided
+[INFO] +- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.apache.kerby:kerb-core:jar:1.1.0:test
+[INFO] |  \- org.apache.kerby:kerby-pkix:jar:1.1.0:test
+[INFO] |     +- org.apache.kerby:kerby-asn1:jar:1.1.0:test
+[INFO] |     \- org.apache.kerby:kerby-util:jar:1.1.0:test
+[INFO] +- org.apache.kerby:kerb-simplekdc:jar:1.1.0:test
+[INFO] |  +- org.apache.kerby:kerb-client:jar:1.1.0:test
+[INFO] |  |  +- org.apache.kerby:kerb-common:jar:1.1.0:test
+[INFO] |  |  |  +- org.apache.kerby:kerb-crypto:jar:1.1.0:test
+[INFO] |  |  |  \- commons-io:commons-io:jar:2.6:test
+[INFO] |  |  +- org.apache.kerby:kerb-util:jar:1.1.0:test
+[INFO] |  |  \- org.apache.kerby:token-provider:jar:1.1.0:test
+[INFO] |  |     \- com.nimbusds:nimbus-jose-jwt:jar:4.41.2:test
+[INFO] |  |        +- com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:test
+[INFO] |  |        \- net.minidev:json-smart:jar:2.3:test (version selected from constraint [1.3.1,2.3])
+[INFO] |  |           \- net.minidev:accessors-smart:jar:1.2:test
+[INFO] |  |              \- org.ow2.asm:asm:jar:5.0.4:test
+[INFO] |  \- org.apache.kerby:kerb-admin:jar:1.1.0:test
+[INFO] |     +- org.apache.kerby:kerb-server:jar:1.1.0:test
+[INFO] |     |  \- org.apache.kerby:kerb-identity:jar:1.1.0:test
+[INFO] |     \- org.apache.kerby:kerby-xdr:jar:1.1.0:test
+[INFO] +- org.apache.kerby:kerby-config:jar:1.1.0:test
+[INFO] +- org.mockito:mockito-core:jar:2.27.0:test
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.9.10:test
+[INFO] |  +- net.bytebuddy:byte-buddy-agent:jar:1.9.10:test
+[INFO] |  \- org.objenesis:objenesis:jar:2.6:test
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] \- org.xerial.snappy:snappy-java:jar:1.1.7:provided
+[INFO] 
+[INFO] ----------< org.apache.zookeeper:zookeeper-metrics-providers >----------
+[INFO] Building Apache ZooKeeper - Metrics Providers 3.6.0-SNAPSHOT      [5/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-metrics-providers ---
+[INFO] org.apache.zookeeper:zookeeper-metrics-providers:pom:3.6.0-SNAPSHOT
+[INFO] 
+[INFO] ---------< org.apache.zookeeper:zookeeper-prometheus-metrics >----------
+[INFO] Building Apache ZooKeeper - Prometheus.io Metrics Provider 3.6.0-SNAPSHOT [6/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-prometheus-metrics ---
+[INFO] org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.6.0-SNAPSHOT
+[INFO] +- org.apache.zookeeper:zookeeper:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport-native-epoll:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.36.Final:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.slf4j:slf4j-log4j12:jar:1.7.25:compile
+[INFO] |  \- log4j:log4j:jar:1.2.17:compile
+[INFO] +- io.prometheus:simpleclient:jar:0.6.0:compile
+[INFO] +- io.prometheus:simpleclient_hotspot:jar:0.6.0:compile
+[INFO] +- io.prometheus:simpleclient_servlet:jar:0.6.0:compile
+[INFO] |  \- io.prometheus:simpleclient_common:jar:0.6.0:compile
+[INFO] +- org.eclipse.jetty:jetty-server:jar:9.4.18.v20190429:provided
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.1.0:provided
+[INFO] |  +- org.eclipse.jetty:jetty-http:jar:9.4.18.v20190429:provided
+[INFO] |  |  \- org.eclipse.jetty:jetty-util:jar:9.4.18.v20190429:provided
+[INFO] |  \- org.eclipse.jetty:jetty-io:jar:9.4.18.v20190429:provided
+[INFO] +- org.eclipse.jetty:jetty-servlet:jar:9.4.18.v20190429:provided
+[INFO] |  \- org.eclipse.jetty:jetty-security:jar:9.4.18.v20190429:provided
+[INFO] +- org.mockito:mockito-core:jar:2.27.0:test
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.9.10:test
+[INFO] |  +- net.bytebuddy:byte-buddy-agent:jar:1.9.10:test
+[INFO] |  \- org.objenesis:objenesis:jar:2.6:test
+[INFO] \- junit:junit:jar:4.12:test
+[INFO]    \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] 
+[INFO] ---------------< org.apache.zookeeper:zookeeper-client >----------------
+[INFO] Building Apache ZooKeeper - Client 3.6.0-SNAPSHOT                 [7/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-client ---
+[INFO] org.apache.zookeeper:zookeeper-client:pom:3.6.0-SNAPSHOT
+[INFO] 
+[INFO] ---------------< org.apache.zookeeper:zookeeper-recipes >---------------
+[INFO] Building Apache ZooKeeper - Recipes 3.6.0-SNAPSHOT                [8/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes ---
+[INFO] org.apache.zookeeper:zookeeper-recipes:pom:3.6.0-SNAPSHOT
+[INFO] +- org.apache.zookeeper:zookeeper:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport-native-epoll:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.36.Final:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.slf4j:slf4j-log4j12:jar:1.7.25:compile
+[INFO] |  \- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.apache.zookeeper:zookeeper:test-jar:tests:3.6.0-SNAPSHOT:test
+[INFO] +- org.xerial.snappy:snappy-java:jar:1.1.7:test
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- io.dropwizard.metrics:metrics-core:jar:3.2.5:test
+[INFO] \- com.github.spotbugs:spotbugs-annotations:jar:3.1.9:provided (optional) 
+[INFO]    \- com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) 
+[INFO] 
+[INFO] ----------< org.apache.zookeeper:zookeeper-recipes-election >-----------
+[INFO] Building Apache ZooKeeper - Recipes - Election 3.6.0-SNAPSHOT     [9/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes-election ---
+[INFO] org.apache.zookeeper:zookeeper-recipes-election:jar:3.6.0-SNAPSHOT
+[INFO] +- org.apache.zookeeper:zookeeper:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport-native-epoll:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.36.Final:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.slf4j:slf4j-log4j12:jar:1.7.25:compile
+[INFO] |  \- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.apache.zookeeper:zookeeper:test-jar:tests:3.6.0-SNAPSHOT:test
+[INFO] +- org.xerial.snappy:snappy-java:jar:1.1.7:test
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- io.dropwizard.metrics:metrics-core:jar:3.2.5:test
+[INFO] \- com.github.spotbugs:spotbugs-annotations:jar:3.1.9:provided (optional) 
+[INFO]    \- com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) 
+[INFO] 
+[INFO] ------------< org.apache.zookeeper:zookeeper-recipes-lock >-------------
+[INFO] Building Apache ZooKeeper - Recipes - Lock 3.6.0-SNAPSHOT        [10/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes-lock ---
+[INFO] org.apache.zookeeper:zookeeper-recipes-lock:jar:3.6.0-SNAPSHOT
+[INFO] +- org.apache.zookeeper:zookeeper:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport-native-epoll:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.36.Final:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.slf4j:slf4j-log4j12:jar:1.7.25:compile
+[INFO] |  \- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.apache.zookeeper:zookeeper:test-jar:tests:3.6.0-SNAPSHOT:test
+[INFO] +- org.xerial.snappy:snappy-java:jar:1.1.7:test
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- io.dropwizard.metrics:metrics-core:jar:3.2.5:test
+[INFO] \- com.github.spotbugs:spotbugs-annotations:jar:3.1.9:provided (optional) 
+[INFO]    \- com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) 
+[INFO] 
+[INFO] ------------< org.apache.zookeeper:zookeeper-recipes-queue >------------
+[INFO] Building Apache ZooKeeper - Recipes - Queue 3.6.0-SNAPSHOT       [11/12]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-recipes-queue ---
+[INFO] org.apache.zookeeper:zookeeper-recipes-queue:jar:3.6.0-SNAPSHOT
+[INFO] +- org.apache.zookeeper:zookeeper:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  +- org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport-native-epoll:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.36.Final:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.slf4j:slf4j-log4j12:jar:1.7.25:compile
+[INFO] |  \- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.apache.zookeeper:zookeeper:test-jar:tests:3.6.0-SNAPSHOT:test
+[INFO] +- org.xerial.snappy:snappy-java:jar:1.1.7:test
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- io.dropwizard.metrics:metrics-core:jar:3.2.5:test
+[INFO] \- com.github.spotbugs:spotbugs-annotations:jar:3.1.9:provided (optional) 
+[INFO]    \- com.google.code.findbugs:jsr305:jar:3.0.2:provided (optional) 
+[INFO] 
+[INFO] --------------< org.apache.zookeeper:zookeeper-assembly >---------------
+[INFO] Building Apache ZooKeeper - Assembly 3.6.0-SNAPSHOT              [12/12]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ zookeeper-assembly ---
+[INFO] org.apache.zookeeper:zookeeper-assembly:pom:3.6.0-SNAPSHOT
+[INFO] +- org.apache.zookeeper:zookeeper-docs:jar:3.6.0-SNAPSHOT:compile
+[INFO] +- org.apache.zookeeper:zookeeper-jute:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  \- org.apache.yetus:audience-annotations:jar:0.5.0:compile
+[INFO] +- org.apache.zookeeper:zookeeper:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- commons-lang:commons-lang:jar:2.6:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport-native-epoll:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-transport-native-unix-common:jar:4.1.36.Final:compile
+[INFO] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[INFO] |  +- org.slf4j:slf4j-log4j12:jar:1.7.25:compile
+[INFO] |  \- log4j:log4j:jar:1.2.17:compile
+[INFO] +- org.apache.zookeeper:zookeeper-client:pom:3.6.0-SNAPSHOT:compile
+[INFO] +- org.apache.zookeeper:zookeeper-prometheus-metrics:jar:3.6.0-SNAPSHOT:compile
+[INFO] |  +- io.prometheus:simpleclient:jar:0.6.0:compile
+[INFO] |  +- io.prometheus:simpleclient_hotspot:jar:0.6.0:compile
+[INFO] |  \- io.prometheus:simpleclient_servlet:jar:0.6.0:compile
+[INFO] |     \- io.prometheus:simpleclient_common:jar:0.6.0:compile
+[INFO] +- org.apache.zookeeper:zookeeper-recipes:pom:3.6.0-SNAPSHOT:compile
+[INFO] +- commons-cli:commons-cli:jar:1.2:compile
+[INFO] +- org.eclipse.jetty:jetty-server:jar:9.4.18.v20190429:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:3.1.0:compile
+[INFO] |  +- org.eclipse.jetty:jetty-http:jar:9.4.18.v20190429:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-util:jar:9.4.18.v20190429:compile
+[INFO] |  \- org.eclipse.jetty:jetty-io:jar:9.4.18.v20190429:compile
+[INFO] +- org.eclipse.jetty:jetty-servlet:jar:9.4.18.v20190429:compile
+[INFO] |  \- org.eclipse.jetty:jetty-security:jar:9.4.18.v20190429:compile
+[INFO] +- com.fasterxml.jackson.core:jackson-databind:jar:2.9.9.1:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile
+[INFO] |  \- com.fasterxml.jackson.core:jackson-core:jar:2.9.9:compile
+[INFO] +- com.googlecode.json-simple:json-simple:jar:1.1.1:compile
+[INFO] +- jline:jline:jar:2.11:compile
+[INFO] +- io.dropwizard.metrics:metrics-core:jar:3.2.5:compile
+[INFO] \- org.xerial.snappy:snappy-java:jar:1.1.7:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Apache ZooKeeper 3.6.0-SNAPSHOT:
+[INFO] 
+[INFO] Apache ZooKeeper ................................... SUCCESS [  0.537 s]
+[INFO] Apache ZooKeeper - Documentation ................... SUCCESS [  0.025 s]
+[INFO] Apache ZooKeeper - Jute ............................ SUCCESS [  0.035 s]
+[INFO] Apache ZooKeeper - Server .......................... SUCCESS [  0.201 s]
+[INFO] Apache ZooKeeper - Metrics Providers ............... SUCCESS [  0.004 s]
+[INFO] Apache ZooKeeper - Prometheus.io Metrics Provider .. SUCCESS [  0.023 s]
+[INFO] Apache ZooKeeper - Client .......................... SUCCESS [  0.004 s]
+[INFO] Apache ZooKeeper - Recipes ......................... SUCCESS [  0.014 s]
+[INFO] Apache ZooKeeper - Recipes - Election .............. SUCCESS [  0.014 s]
+[INFO] Apache ZooKeeper - Recipes - Lock .................. SUCCESS [  0.015 s]
+[INFO] Apache ZooKeeper - Recipes - Queue ................. SUCCESS [  0.012 s]
+[INFO] Apache ZooKeeper - Assembly ........................ SUCCESS [  0.025 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.239 s
+[INFO] Finished at: 2019-08-13T18:11:40+08:00
+[INFO] ------------------------------------------------------------------------
