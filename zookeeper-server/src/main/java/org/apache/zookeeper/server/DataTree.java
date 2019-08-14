@@ -870,6 +870,7 @@ public class DataTree {
 
     public ProcessTxnResult processTxn(TxnHeader header, Record txn, boolean isSubTxn)
     {
+        LOG.info("DateTree processTxn header: {}, txn:{}", header, txn);
         ProcessTxnResult rc = new ProcessTxnResult();
 
         try {
