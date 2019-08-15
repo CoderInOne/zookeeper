@@ -95,3 +95,5 @@ zookeeper-server/src/test/resources/
 
 data/
 data-*/
+
+*.dynamic.next
