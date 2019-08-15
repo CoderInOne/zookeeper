@@ -92,3 +92,6 @@ zookeeper-server/src/test/resources/
 
 # Python
 *.py[cod]
+
+data/
+data-*/

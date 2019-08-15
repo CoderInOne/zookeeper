@@ -592,8 +592,8 @@ public class Leader extends LearnerMaster {
             // us. We do this by waiting for the NEWLEADER packet to get
             // acknowledged
 
-             waitForEpochAck(self.getId(), leaderStateSummary);
-             self.setCurrentEpoch(epoch);
+            waitForEpochAck(self.getId(), leaderStateSummary);
+            self.setCurrentEpoch(epoch);
             self.setLeaderAddressAndId(self.getQuorumAddress(), self.getId());
             self.setZabState(QuorumPeer.ZabState.SYNCHRONIZATION);
 

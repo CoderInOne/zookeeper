@@ -57,13 +57,8 @@
   </licenses>
 
   <modules>
-    <module>zookeeper-docs</module>
     <module>zookeeper-jute</module>
     <module>zookeeper-server</module>
-    <module>zookeeper-metrics-providers</module>
-    <module>zookeeper-client</module>
-    <module>zookeeper-recipes</module>
-    <module>zookeeper-assembly</module>
   </modules>
 
   <scm>
@@ -248,12 +243,6 @@
   </developers>
 
   <profiles>
-    <profile>
-      <id>full-build</id>
-      <modules>
-        <module>zookeeper-contrib</module>
-      </modules>
-    </profile>
     <profile>
       <id>java-build</id>
       <activation>
@@ -564,47 +553,9 @@
           <version>4.3.1</version>
         </plugin>
         <plugin>
-          <groupId>com.github.spotbugs</groupId>
-          <artifactId>spotbugs-maven-plugin</artifactId>
-          <version>3.1.9</version>
-          <configuration>
-            <excludeFilterFile>excludeFindBugsFilter.xml</excludeFilterFile>
-          </configuration>
-        </plugin>
-        <plugin>
           <groupId>org.owasp</groupId>
           <artifactId>dependency-check-maven</artifactId>
           <version>5.1.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.1.0</version>
-          <dependencies>
-            <dependency>
-              <groupId>com.puppycrawl.tools</groupId>
-              <artifactId>checkstyle</artifactId>
-              <version>${checkstyle.version}</version>
-            </dependency>
-          </dependencies>
-          <configuration>
-            <configLocation>checkstyle.xml</configLocation>
-            <suppressionsLocation>checkstyleSuppressions.xml</suppressionsLocation>
-            <encoding>UTF-8</encoding>
-            <consoleOutput>true</consoleOutput>
-            <failOnViolation>true</failOnViolation>
-            <includeResources>false</includeResources>
-            <includeTestSourceDirectory>true</includeTestSourceDirectory>
-          </configuration>
-          <executions>
-            <execution>
-              <id>checkstyle</id>
-              <phase>validate</phase>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -713,29 +664,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-javadocs</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>aggregate</id>
-            <phase>site</phase>
-            <goals>
-              <goal>aggregate</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <overview>zookeeper-server/src/main/resources/overview.html</overview>
-          <excludePackageNames>*.recipes.*</excludePackageNames>
-        </configuration>
       </plugin>
       <plugin>
         <!-- Maven's deploy plugin only creates checksums during the deployment of the jar artifacts to repo. -->
